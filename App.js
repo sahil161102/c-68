@@ -1,13 +1,20 @@
-import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
-import HomeScreen from './screens/HomeScreen';
-
-export default class App extends Component{
+import { StatusBar } from 'expo-status-bar';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import Tabs from "./components/tab"
+export default class App extends React.Component {
   render(){
-    return(
-      <View style={{flex:1}}>
-        <HomeScreen />
-      </View>
-    )
+  return (
+    <Tabs/>
+  );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
